@@ -1,0 +1,26 @@
+# Archivos y directorios que se ignorarán en el repositorio
+
+# Archivos de configuración
+.config/
+.env
+
+# Archivos de compilación y ejecución
+build/
+dist/
+node_modules/
+
+# Archivos de logs
+logs/
+
+# Archivos de sistema
+.DS_Store
+Thumbs.db
+
+# Archivos de IDE
+.vscode/
+.idea/
+
+# Otros archivos que no se desean versionar
+*.tmp
+*.log
+*.bak
