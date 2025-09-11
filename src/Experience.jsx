@@ -59,6 +59,11 @@ export default function Experience() {
           >
             Arturo Muñoz
           </Text>
+
+          <mesh position={[-2, -0.54, -0.4]}>
+            <torusKnotGeometry args={[0.1, 0.05, 64, 8]} />
+            <meshNormalMaterial />
+          </mesh>
         </Float>
       </PresentationControls>
       <ContactShadows position-y={-1.4} opacity={1} scale={5} blur={3.4} />
