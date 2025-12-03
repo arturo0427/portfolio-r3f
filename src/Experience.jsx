@@ -7,19 +7,20 @@ import {
   ContactShadows,
   Html,
   Text,
-} from '@react-three/drei';
+} from "@react-three/drei";
 
 export default function Experience() {
-  const computer = useGLTF(
-    'https://vazxmixjsiawhamofees.supabase.co/storage/v1/object/public/models/macbook/model.gltf'
-  );
+  // const computer = useGLTF(
+  //   'https://vazxmixjsiawhamofees.supabase.co/storage/v1/object/public/models/macbook/model.gltf'
+  // );
+  const computer = useGLTF("./mac-draco.glb");
 
   return (
     <>
       <ambientLight intensity={0.5} />
       <directionalLight position={[2, 2, 2]} intensity={5} />
       <Environment preset="night" />
-      <color args={['#0D1117']} attach={'background'} />
+      <color args={["#0D1117"]} attach={"background"} />
 
       <PresentationControls
         global
@@ -29,22 +30,27 @@ export default function Experience() {
         config={{ mass: 1, tension: 170, friction: 26 }}
         snap
       >
-        <Float rotationIntensity={0.4}>
+        <Float rotationIntensity={0.2}>
           <rectAreaLight
             width={2.5}
             height={1.65}
             intensity={50}
-            color={'#58A6FF'}
+            color={"#58A6FF"}
             rotation={[-0.1, Math.PI, 0]}
             position={[0, 0.55, -1.15]}
           />
-          <primitive object={computer.scene} position-y={-1.2}>
+          <primitive
+            object={computer.scene}
+            position-y={-1.2}
+            position-z={-2}
+            scale={0.4}
+          >
             <Html
               transform
               wrapperClass="htmlScreen"
-              distanceFactor={1.17}
-              position={[0, 1.56, -1.4]}
-              rotation-x={-0.256}
+              distanceFactor={4.35}
+              position={[2.79, 1.3, -4]}
+              rotation-x={-0.0009}
             >
               <iframe src="https://arturo0427.github.io/portafolio-responsive/"></iframe>
             </Html>
